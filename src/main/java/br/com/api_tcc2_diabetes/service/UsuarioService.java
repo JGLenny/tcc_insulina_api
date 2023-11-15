@@ -23,6 +23,7 @@ public class UsuarioService {
 		novoUsuario.setNome_usuario(usuario.getNome_usuario());
 		novoUsuario.setSenha_usuario(usuario.getSenha_usuario());
 	    novoUsuario.setSexo_usuario(usuario.getSexo_usuario());
+	    novoUsuario.setIdade_usuario(usuario.getIdade_usuario());
 
 		usuarioRepository.save(novoUsuario);
 
