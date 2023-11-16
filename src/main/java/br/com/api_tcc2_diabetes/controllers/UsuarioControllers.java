@@ -61,12 +61,16 @@ public class UsuarioControllers {
 
 }
 	//aqui comeca
-	
-	
-	
-	
+	@ResponseBody
+	@GetMapping(value = "**/listaUsuario")
+	public ResponseEntity<List<Usuario>> listaUsuario() {
+
+		List<Usuario> usuario = usuarioRepository.findAll();
+
+		return new ResponseEntity<List<Usuario>>(usuario, HttpStatus.OK);
+
+	}
 	//aqui finaliza
 	
-	
-	
+		
 }
