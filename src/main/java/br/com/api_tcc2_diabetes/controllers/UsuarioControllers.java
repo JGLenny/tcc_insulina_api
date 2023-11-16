@@ -41,7 +41,7 @@ public class UsuarioControllers {
 
 	
 
-		return new ResponseEntity<Usuario>(usuario1, HttpStatus.OK);
+		return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
 
 	}
 	
@@ -52,7 +52,7 @@ public class UsuarioControllers {
 		List<Usuario> usuarios = usuarioRepository.buscaUsuarioPorId(id);
 		if (usuarios.isEmpty()) {
 			throw new ExceptionTccDiabetes(
-					"O Usuário com código: " + id + " não existe no Banco de Dados");
+					"O Usuário com código: " + id + " não localizado no Banco de Dados");
 		}
 		
 		usuarioRepository.deleteById(id);
