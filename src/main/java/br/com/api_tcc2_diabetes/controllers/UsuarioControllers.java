@@ -41,7 +41,7 @@ public class UsuarioControllers {
 
 	
 
-		return new ResponseEntity<Usuario>(usuario, HttpStatus.OK);
+		return new ResponseEntity<Usuario>(usuario1, HttpStatus.OK);
 
 	}
 	
