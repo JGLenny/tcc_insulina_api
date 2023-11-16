@@ -60,4 +60,13 @@ public class UsuarioControllers {
 		return new ResponseEntity("Usuario deletado por Id com sucesso!", HttpStatus.OK);
 
 }
+	//aqui comeca
+	
+	
+	
+	
+	//aqui finaliza
+	
+	
+	
 }
