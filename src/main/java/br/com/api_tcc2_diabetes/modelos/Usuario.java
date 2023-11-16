@@ -27,7 +27,6 @@ public class Usuario implements Serializable {
 	@Column(nullable = false, unique = true)
 	private String login_usuario;
 
-
 	@NotNull(message = "A senha deve ser Informada")
 	@Column(nullable = false)
 	private String senha_usuario;
@@ -39,19 +38,25 @@ public class Usuario implements Serializable {
 	@NotNull(message = "O sexo do Usuario deve ser Informado")
 	@Column(nullable = false)
 	private char sexo_usuario;
-	
-	//@NotNull(message = "A Idade do Usuario deve ser Informado")
-	//@Column(nullable = false)
-	//private Long idade_usuario;
 
-
-
+	@NotNull(message = "A Idade do Usuario deve ser Informado")
+	@Column(nullable = false)
+	private Integer idade_usuario;
 
 	@NotNull(message = "O Email do Usuario deve ser Informado")
 	@Column(nullable = false)
 	private String email_usuario;
 	
 	
+	
+
+	public Integer getIdade_usuario() {
+		return idade_usuario;
+	}
+
+	public void setIdade_usuario(Integer idade_usuario) {
+		this.idade_usuario = idade_usuario;
+	}
 
 	public char getSexo_usuario() {
 		return sexo_usuario;
@@ -68,7 +73,7 @@ public class Usuario implements Serializable {
 	public void setId(Long id) {
 		this.id = id;
 	}
-	
+
 	public String getLogin_usuario() {
 		return login_usuario;
 	}
@@ -92,7 +97,6 @@ public class Usuario implements Serializable {
 	public void setNome_usuario(String nome_usuario) {
 		this.nome_usuario = nome_usuario;
 	}
-
 
 	public String getEmail_usuario() {
 		return email_usuario;
