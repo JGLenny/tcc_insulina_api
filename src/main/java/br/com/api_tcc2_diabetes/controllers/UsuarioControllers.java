@@ -58,13 +58,13 @@ public class UsuarioControllers {
 		
 		usuarioRepository.deleteById(id);
 
-		return new ResponseEntity("Usuario deletado por Id com sucesso!", HttpStatus.OK);
+		return new ResponseEntity<Object>("Usuario deletado por Id com sucesso!", HttpStatus.OK);
 
 }
 	//aqui comeca
 	@ResponseBody
-	@GetMapping(value = "**/listaUsuario")
-	public ResponseEntity<List<Usuario>> listaUsuario() {
+	@GetMapping(value = "**/listarUsuario")
+	public ResponseEntity<List<Usuario>> listarUsuario() {
 
 		List<Usuario> usuario = usuarioRepository.findAll();
 
