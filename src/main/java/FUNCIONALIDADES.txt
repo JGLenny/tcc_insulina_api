@@ -1,0 +1,12 @@
+2.7 Funcionalidade do Produto 
+As principais funcionalidades do produto de software. 
+
+*Cadastrar o email do usuário. ok
+*Cadastrar senha do usuário   ok
+*Cadastrar login do usuário ok
+*Cadastrar nome do usuário ok
+*Cadastrar idade do usuário ok
+*Cadastrar sexo do usuário ok 
+*Validar email e login do usuário. 
+*Calcular as taxas de insulina 
+*Informar a dosagem a ser aplicada.

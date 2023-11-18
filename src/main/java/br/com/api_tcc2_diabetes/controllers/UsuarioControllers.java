@@ -36,7 +36,15 @@ public class UsuarioControllers {
 	@PostMapping(value = "**/cadastrarUsuario")
 	public ResponseEntity<Usuario> salvarUsuario(@RequestBody @Valid Usuario usuario) throws ExceptionTccDiabetes {
 
-	
+		if (usuario.getId() == null) {
+			List<Usuario> usuarios = usuarioRepository.buscaUsuarioLogin(usuario.getLogin_usuario().toUpperCase());
+
+			if (!usuarios.isEmpty()) {
+
+				throw new ExceptionTccDiabetes("Já exixte Login com essa descrição: " + usuario.getLogin_usuario());
+
+			}
+		}
 
 		Usuario usuario1 = usuarioService.cadastrarUsuario(usuario);
 
@@ -61,7 +69,7 @@ public class UsuarioControllers {
 		return new ResponseEntity<Object>("Usuario deletado por Id com sucesso!", HttpStatus.OK);
 
 }
-	//aqui comeca
+	
 	@ResponseBody
 	@GetMapping(value = "**/listarUsuario")
 	public ResponseEntity<List<Usuario>> listarUsuario() {
@@ -71,7 +79,7 @@ public class UsuarioControllers {
 		return new ResponseEntity<List<Usuario>>(usuario, HttpStatus.OK);
 
 	}
-	//aqui finaliza
+	
 	
 		
 }
