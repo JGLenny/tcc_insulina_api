@@ -9,5 +9,5 @@ As principais funcionalidades do produto de software.
 *Cadastrar sexo do usuário ok 
 *Validar email ok
  validar login do usuário. ok
-*Calcular as taxas de insulina 
-*Informar a dosagem a ser aplicada.
+*Calcular as taxas de insulina ok
+*Informar a dosagem a ser aplicada. ok

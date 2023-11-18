@@ -41,7 +41,7 @@ public class UsuarioControllers {
 
 			if (!usuarios.isEmpty()) {
 
-				throw new ExceptionTccDiabetes("Já exixte Login com essa descrição: " + usuario.getLogin_usuario());
+				throw new ExceptionTccDiabetes("Login já existente: " + usuario.getLogin_usuario());
 
 			}
 		}
@@ -49,7 +49,7 @@ public class UsuarioControllers {
 		List<Usuario> usuarios1 = usuarioRepository.buscaUsuarioEmail(usuario.getEmail_usuario().toUpperCase());
 		if (!usuarios1.isEmpty()) {
 			throw new ExceptionTccDiabetes(
-					"O email: " + usuario.getEmail_usuario() + " já está cadastrado no Banco de Dados");
+					"O email: " + usuario.getEmail_usuario() + " incluso no Banco de Dados");
 		}
 
 	
@@ -75,7 +75,7 @@ public class UsuarioControllers {
 		
 		usuarioRepository.deleteById(id);
 
-		return new ResponseEntity<Object>("Usuario deletado por Id com sucesso!", HttpStatus.OK);
+		return new ResponseEntity<Object>("Usuario deletado !", HttpStatus.OK);
 
 }
 	
