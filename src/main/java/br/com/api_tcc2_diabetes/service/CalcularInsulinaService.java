@@ -8,7 +8,7 @@ import br.com.api_tcc2_diabetes.modelos.CalcularInsulina;
 public class CalcularInsulinaService {
 	
 
-	// carboidrato: quantas de insulina por grama de carboidrato
+	// carboidrato: valor de insulina por grama de carboidrato
 	private static final double CARB_RATIO = 0.5;
 
 	// Fator de sensibilidade à insulina: quantas unidades de insulina por mg/dL de
