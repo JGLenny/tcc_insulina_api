@@ -45,6 +45,14 @@ public class UsuarioControllers {
 
 			}
 		}
+		
+		List<Usuario> usuarios1 = usuarioRepository.buscaUsuarioEmail(usuario.getEmail_usuario().toUpperCase());
+		if (!usuarios1.isEmpty()) {
+			throw new ExceptionTccDiabetes(
+					"O email: " + usuario.getEmail_usuario() + " já está cadastrado no Banco de Dados");
+		}
+
+	
 
 		Usuario usuario1 = usuarioService.cadastrarUsuario(usuario);
 
@@ -63,6 +71,7 @@ public class UsuarioControllers {
 			throw new ExceptionTccDiabetes(
 					"O Usuário com código: " + id + " não localizado no Banco de Dados");
 		}
+		
 		
 		usuarioRepository.deleteById(id);
 
