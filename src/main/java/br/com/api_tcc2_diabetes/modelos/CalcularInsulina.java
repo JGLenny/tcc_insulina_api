@@ -21,7 +21,7 @@ public class CalcularInsulina implements Serializable {
 	private Long id;
 
 
-	private double quantidadeCarboidrato; // Quantidade de carboidratos em gramas
+	private double quantidadeCarboidrato; // Quantidade de carboidratos em ml
 	
 	private double nivelDeGlicose; // Nível de glicose no sangue em mg/dL
 	
