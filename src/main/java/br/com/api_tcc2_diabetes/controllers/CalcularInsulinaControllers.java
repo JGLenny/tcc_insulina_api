@@ -18,7 +18,7 @@ public class CalcularInsulinaControllers {
 	private CalcularInsulinaService calcularInsulinaService;
 
 	
-	 @PostMapping("**/calcularDoseInsulina")
+	 @PostMapping("**/calcularDoseInsulina  ")
 	    public ResponseEntity<String> calcularDoseInsulina(@RequestBody CalcularInsulina calcularInsulina) {
 	       
 	    	double insulinDose = calcularInsulinaService.calcularDoseInsulina(calcularInsulina);
